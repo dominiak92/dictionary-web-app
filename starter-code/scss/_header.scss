@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 327px;
+  height: 32px;
+  &__logo {
+    height: 32px;
+    width: 28px;
+  }
+  &__font-style-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__fonts {
+    border: none;
+    font-family: $font2;
+    background-color: $white;
+    font-size: 14px;
+    width: 96px;
+    height: 24px;
+    text-align: center;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 20px;
+    background-image: url(/starter-code/assets/images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3px);
+    background-size: 13px;
+  }
+  &__separate {
+    height: 32px;
+    width: 1px;
+    background-color: $lightergray;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @include toggle;
+  &__moon {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+  }
+}
+input {
+  width: 327px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: none;
+  padding: 16px;
+  margin-top: 24px;
+  background-color: $almostwhite;
+  background-image: url(/starter-code/assets/images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px);
+  background-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $darkgray2nd;
+  &:focus {
+    outline: none;
+  }
+}

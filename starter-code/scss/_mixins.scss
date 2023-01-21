@@ -36,7 +36,7 @@
     text-indent: -9999px;
     width: 43px;
     height: 24px;
-    background: #CFD8EF;
+    background: $lightgray;
     display: block;
     border-radius: 100px;
     position: relative;
@@ -63,7 +63,7 @@
       + {
         label {
             transition: 0.5s;
-          background: #7AEADF;
+          background: $purple;
           &:after {
             left: calc(100% - 5px);
             transform: translateX(-100%);

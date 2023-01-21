@@ -1,10 +1,121 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Inconsolata", monospace;
+  font-family: "Inter", sans-serif;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-color: #F4F4F4;
+  width: 375px;
+  background-color: #FFFFFF;
   transition: 0.2s linear;
   color: #2D2D2D;
+  padding: 24px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 327px;
+  height: 32px;
+}
+.header__logo {
+  height: 32px;
+  width: 28px;
+}
+.header__font-style-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__fonts {
+  border: none;
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  width: 96px;
+  height: 24px;
+  text-align: center;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 20px;
+  background-image: url(/starter-code/assets/images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 3px);
+  background-size: 13px;
+}
+.header__separate {
+  height: 32px;
+  width: 1px;
+  background-color: #E9E9E9;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.header input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.header label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 43px;
+  height: 24px;
+  background: #757575;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  transition: 0.1s;
+}
+.header label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+.header label:active:after {
+  width: 25px;
+}
+.header input:checked + label {
+  transition: 0.5s;
+  background: #A445ED;
+}
+.header input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+.header__moon {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+}
+
+input {
+  width: 327px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: none;
+  padding: 16px;
+  margin-top: 24px;
+  background-color: #F4F4F4;
+  background-image: url(/starter-code/assets/images/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px);
+  background-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2D2D2D;
+}
+input:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
