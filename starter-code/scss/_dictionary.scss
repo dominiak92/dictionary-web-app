@@ -1,0 +1,118 @@
+.dictionary {
+  &__head {
+    display: flex;
+    width: 327px;
+    height: 69px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+  }
+  &__word-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: auto;
+  }
+  &__word {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__phonetics {
+    margin: 0;
+    margin-top: 7px;
+    color: $purple;
+  }
+  &__play {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+  &__first-partOfSpeech-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__first-partOfSpeech {
+    font-weight: 700;
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 25px;
+  }
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: $lightergray;
+  }
+  &__meaning {
+    color: $lightgray;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  &__list-noun {
+    list-style: none;
+  }
+  &__definition {
+    margin-bottom: 13px;
+    &::before {
+      content: "\2022";
+      color: $purple;
+      font-weight: bold;
+      display: inline-block;
+      width: 35px;
+      margin-left: -40px;
+    }
+  }
+  &__synonyms {
+    display: flex;
+  }
+  &__synonym-name {
+    color: $lightgray;
+    font-size: 16px;
+    margin-right: 24px;
+  }
+  &__synonym {
+    font-size: 16px;
+    color: $purple;
+    font-weight: 700;
+  }
+  &__second-partOfSpeech-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__second-partOfSpeech {
+    font-weight: 700;
+    font-size: 18px;
+    font-style: italic;
+    margin-right: 25px;
+  }
+  &__list-verb {
+    list-style: none;
+  }
+  &__example {
+    font-size: 15px;
+    color: $lightgray;
+    margin-top: 13px;
+    padding-left: 35px;
+    margin-bottom: 32px;
+  }
+  &__source {
+    color: $lightgray;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 24px;
+  }
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link {
+    color: $black;
+  }
+}

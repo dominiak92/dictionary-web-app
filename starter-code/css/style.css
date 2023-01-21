@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   flex-direction: column;
@@ -118,4 +119,121 @@ input {
 }
 input:focus {
   outline: none;
+}
+
+.dictionary__head {
+  display: flex;
+  width: 327px;
+  height: 69px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+.dictionary__word-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: auto;
+}
+.dictionary__word {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+.dictionary__phonetics {
+  margin: 0;
+  margin-top: 7px;
+  color: #A445ED;
+}
+.dictionary__play {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.dictionary__first-partOfSpeech-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dictionary__first-partOfSpeech {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+  margin-right: 25px;
+}
+.dictionary__line {
+  height: 1px;
+  width: 100%;
+  background-color: #E9E9E9;
+}
+.dictionary__meaning {
+  color: #757575;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.dictionary__list-noun {
+  list-style: none;
+}
+.dictionary__definition {
+  margin-bottom: 13px;
+}
+.dictionary__definition::before {
+  content: "•";
+  color: #A445ED;
+  font-weight: bold;
+  display: inline-block;
+  width: 35px;
+  margin-left: -40px;
+}
+.dictionary__synonyms {
+  display: flex;
+}
+.dictionary__synonym-name {
+  color: #757575;
+  font-size: 16px;
+  margin-right: 24px;
+}
+.dictionary__synonym {
+  font-size: 16px;
+  color: #A445ED;
+  font-weight: 700;
+}
+.dictionary__second-partOfSpeech-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dictionary__second-partOfSpeech {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+  margin-right: 25px;
+}
+.dictionary__list-verb {
+  list-style: none;
+}
+.dictionary__example {
+  font-size: 15px;
+  color: #757575;
+  margin-top: 13px;
+  padding-left: 35px;
+  margin-bottom: 32px;
+}
+.dictionary__source {
+  color: #757575;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 24px;
+}
+.dictionary__link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dictionary__link {
+  color: #050505;
 }/*# sourceMappingURL=style.css.map */
