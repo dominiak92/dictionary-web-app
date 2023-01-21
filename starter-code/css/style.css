@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inconsolata", monospace;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F4F4F4;
+  transition: 0.2s linear;
+  color: #2D2D2D;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $font1;
+  align-items: center;
+  min-height: 100vh; 
+  background-color: $almostwhite;
+  transition: 0.2s linear;
+  color: $darkgray2nd;
+}
