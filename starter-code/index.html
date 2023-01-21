@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/starter-code/normalize/normalize.css">
-    <link rel="stylesheet" href="/starter-code/css/style.css">
+    <link rel="stylesheet" href="/starter-code/normalize/normalize.css" />
+    <link rel="stylesheet" href="/starter-code/css/style.css" />
     <script src="script.js" async></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
@@ -15,5 +15,88 @@
     />
     <title>Dictionary Web App</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img
+        src="/starter-code/assets/images/logo.svg"
+        alt="logo"
+        class="header__logo"
+      />
+      <div class="header__font-style-wrapper">
+        <select class="header__fonts" name="font" id="font">
+          <option value="Sans Serif">Sans Serif</option>
+          <option value="Serif">Serif</option>
+          <option value="Mono">Mono</option>
+        </select>
+
+        <div class="header__separate"></div>
+        <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+        <img src="/starter-code/assets/images/icon-moon.svg" alt="moon" />
+      </div>
+    </header>
+    <input
+      type="text"
+      name="header__input"
+      placeholder="Search for any word"
+      spellcheck
+      required
+    />
+    <!-- background: url(images/comment-author.gif) no-repeat scroll 7px 7px;
+padding-left:30px; -->
+    <section class="dictionary">
+      <div class="dictionary__head">
+        <div class="dictionary__word-wrapper">
+          <p class="dictionary__word">keyboard</p>
+          <p class="dictionary__phonetics">/ˈkiːbɔːd/</p>
+        </div>
+        <img
+          src="/starter-code/assets/images/icon-play.svg"
+          alt="play button"
+        />
+      </div>
+      <div class="dictionary__first-partOfSpeech-element">
+        <p class="dictionary__first-partOfSpeech">noun</p>
+        <div class="dictionary__line"></div>
+      </div>
+      <p class="dictionary__first-meaning">Meaning</p>
+      <ul class="dictionary__list-one">
+        <li class="dictionary__definition-one">
+          (etc.) A set of keys used to operate a typewriter, computer etc.
+        </li>
+        <li class="dictionary__definition-two">
+          A component of many instruments including the piano, organ, and
+          harpsichord consisting of usually black and white keys that cause
+          different tones to be produced when struck.
+        </li>
+        <li class="dictionary__definition-three">
+          A device with keys of a musical keyboard, used to control electronic
+          sound-producing devices which may be built into or separate from the
+          keyboard device.
+        </li>
+      </ul>
+      <div class="dictionary__synonyms">
+        <p class="dictionary__synonym-name">Synonym</p>
+        <p class="synonym">electronic keyboard</p>
+      </div>
+      <div class="dictionary__second-partOfSpeech-element">
+        <p class="dictionary__second-partOfSpeech">verb</p>
+        <div class="dictionary__line"></div>
+      </div>
+      <p class="dictionary__first-meaning">Meaning</p>
+      <ul class="dictionary__list-two">
+        <li class="dictionary__definition-four">
+          To type on a computer keyboard.
+        </li>
+        <li class="dictionary__example">
+          Keyboarding is the part of this job I hate the most.
+        </li>
+      </ul>
+      <div class="dictionary__line"></div>
+      <p class="dictionary__source">Source</p>
+      <div class="link wrapper">
+        <a href="#">https://en.wiktionary.org/wiki/keyboard</a>
+        <img src="/starter-code/assets/images/icon-new-window.svg" alt="">
+      </div>
+    </section>
+  </body>
 </html>
