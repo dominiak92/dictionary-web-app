@@ -73,3 +73,17 @@
     }
   }
 }
+
+@mixin partOfSpeech {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin elementOdSpeech {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+  margin-right: 25px;
+}

@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="/starter-code/normalize/normalize.css" />
     <link rel="stylesheet" href="/starter-code/css/style.css" />
-    <script src="script.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" type="module" async></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <title>Dictionary Web App</title>
   </head>
   <body>
@@ -39,7 +41,9 @@
       </div>
     </header>
     <input
+      class="header__input"
       type="text"
+      value = 'developer'
       name="header__input"
       placeholder="Search for any word"
       spellcheck
@@ -48,8 +52,8 @@
     <section class="dictionary">
       <div class="dictionary__head">
         <div class="dictionary__word-wrapper">
-          <p class="dictionary__word">keyboard</p>
-          <p class="dictionary__phonetics">/ˈkiːbɔːd/</p>
+          <p class="dictionary__word">developer</p>
+          <p class="dictionary__phonetics">/dɪˈvɛləpə(ɹ)/</p>
         </div>
         <img
           class="dictionary__play"
@@ -57,46 +61,57 @@
           alt="play button"
         />
       </div>
-      <div class="dictionary__first-partOfSpeech-element">
-        <p class="dictionary__first-partOfSpeech">noun</p>
-        <div class="dictionary__line"></div>
+      <div class="noun">
+        <div class="dictionary__first-partOfSpeech-element">
+          <p class="dictionary__first-partOfSpeech">noun</p>
+          <div class="dictionary__line"></div>
+        </div>
+        <p class="dictionary__meaning">Meaning</p>
+        <div class="dictionary__wrapper">
+          <ul class="dictionary__list-noun">
+          </ul>
+        </div>
+        <div class="dictionary__synonyms noun-synonyms">
+        </div>
       </div>
-      <p class="dictionary__meaning">Meaning</p>
-      <ul class="dictionary__list-noun">
-        <li class="dictionary__definition">
-          (etc.) A set of keys used to operate a typewriter, computer etc.
-        </li>
-        <li class="dictionary__definition">
-          A component of many instruments including the piano, organ, and
-          harpsichord consisting of usually black and white keys that cause
-          different tones to be produced when struck.
-        </li>
-        <li class="dictionary__definition">
-          A device with keys of a musical keyboard, used to control electronic
-          sound-producing devices which may be built into or separate from the
-          keyboard device.
-        </li>
-      </ul>
-      <div class="dictionary__synonyms">
-        <p class="dictionary__synonym-name">Synonyms</p>
-        <p class="dictionary__synonym">electronic keyboard</p>
+      <div class="verb">
+        <div class="dictionary__second-partOfSpeech-element">
+          <p class="dictionary__second-partOfSpeech">verb</p>
+          <div class="dictionary__line"></div>
+        </div>
+        <p class="dictionary__meaning">Meaning</p>
+        <div class="dictionary__wrapper">
+          <ul class="dictionary__list-verb"></ul>
+        </div>
+        <div class="dictionary__synonyms verb-synonyms"></div>
+        <p class="dictionary__example">
+          "Keyboarding is the part of this job I hate the most."
+        </p>
       </div>
-      <div class="dictionary__second-partOfSpeech-element">
-        <p class="dictionary__second-partOfSpeech">verb</p>
-        <div class="dictionary__line"></div>
+      <div class="adjective">
+        <div class="dictionary__third-partOfSpeech-element">
+          <p class="dictionary__third-partOfSpeech">adjective</p>
+          <div class="dictionary__line"></div>
+        </div>
+        <p class="dictionary__meaning">Meaning</p>
+        <div class="dictionary__wrapper">
+          <ul class="dictionary__list-adjective"></ul>
+        </div>
+        <div class="dictionary__synonyms adjective-synonyms"></div>
+        <p class="dictionary__example">
+          "Keyboarding is the part of this job I hate the most."
+        </p>
       </div>
-      <p class="dictionary__meaning">Meaning</p>
-      <ul class="dictionary__list-verb">
-        <li class="dictionary__definition">To type on a computer keyboard.</li>
-      </ul>
-      <p class="dictionary__example">
-        "Keyboarding is the part of this job I hate the most."
-      </p>
       <div class="dictionary__line"></div>
       <p class="dictionary__source">Source</p>
       <div class="dictionary__link-wrapper">
-        <a class="dictionary__link" href="#">https://en.wiktionary.org/wiki/keyboard</a>
-        <img src="/starter-code/assets/images/icon-new-window.svg" alt="new window" />
+        <a class="dictionary__link" href="
+        https://en.wiktionary.org/wiki/developer">
+          https://en.wiktionary.org/wiki/developer</a>
+        <img
+          src="/starter-code/assets/images/icon-new-window.svg"
+          alt="new window"
+        />
       </div>
     </section>
   </body>

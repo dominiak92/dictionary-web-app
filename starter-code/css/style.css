@@ -213,7 +213,22 @@ input:focus {
   font-style: italic;
   margin-right: 25px;
 }
+.dictionary__third-partOfSpeech-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dictionary__third-partOfSpeech {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+  margin-right: 25px;
+}
 .dictionary__list-verb {
+  list-style: none;
+}
+.dictionary__list-adjective {
   list-style: none;
 }
 .dictionary__example {
@@ -236,4 +251,22 @@ input:focus {
 }
 .dictionary__link {
   color: #050505;
+}
+.dictionary .verb {
+  display: none;
+}
+.dictionary .adjective {
+  display: none;
+}
+.dictionary .noun {
+  display: none;
+}
+.dictionary .adjective-synonyms {
+  display: none;
+}
+.dictionary .verb-synonyms {
+  display: none;
+}
+.dictionary .noun-synonyms {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

@@ -31,16 +31,10 @@
     cursor: pointer;
   }
   &__first-partOfSpeech-element {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include partOfSpeech
   }
   &__first-partOfSpeech {
-    font-weight: 700;
-    font-size: 18px;
-    font-style: italic;
-    margin-right: 25px;
+    @include elementOdSpeech
   }
   &__line {
     height: 1px;
@@ -80,18 +74,21 @@
     font-weight: 700;
   }
   &__second-partOfSpeech-element {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include partOfSpeech
   }
   &__second-partOfSpeech {
-    font-weight: 700;
-    font-size: 18px;
-    font-style: italic;
-    margin-right: 25px;
+    @include elementOdSpeech
+  }
+  &__third-partOfSpeech-element {
+    @include partOfSpeech
+  }
+  &__third-partOfSpeech {
+    @include elementOdSpeech
   }
   &__list-verb {
+    list-style: none;
+  }
+  &__list-adjective {
     list-style: none;
   }
   &__example {
@@ -114,5 +111,23 @@
   }
   &__link {
     color: $black;
+  }
+  .verb {
+    display: none
+  }
+  .adjective {
+    display: none
+  }
+  .noun {
+    display: none
+  }
+  .adjective-synonyms {
+    display: none;
+  }
+  .verb-synonyms {
+    display: none;
+  }
+  .noun-synonyms {
+    display: none;
   }
 }
