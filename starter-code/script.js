@@ -211,7 +211,7 @@ playButton.addEventListener('click', playAudio)
         inputWrapper.appendChild(msg)
         msg.innerText = 'Please write the correct word';
         const errorImg = document.createElement('img');
-        errorImg.setAttribute('src', '../assets/images/404-error.png');
+        errorImg.setAttribute('src', './starter-code/assets/images/404-error.png');
         errorImg.setAttribute('class', 'dictionary__errorImg');
         // header.appendChild(errorImg)
         const wrapper = document.createElement('div');
