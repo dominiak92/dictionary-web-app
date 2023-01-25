@@ -1,0 +1,26 @@
+@mixin dark {
+  body.dark {
+    background-color: $black;
+    color: $white;
+    .header {
+      transition: 0.3s linear;
+      &__fonts {
+        background-color: $black;
+        color: $white;
+      }
+      &__moon {
+        filter: invert(40%) sepia(96%) saturate(4816%) hue-rotate(260deg)
+          brightness(99%) contrast(87%);
+      }
+      &__input {
+        background-color: $darkgray;
+        color: $white;
+      }
+    }
+    .dictionary {
+        &__link {
+            color: $white;
+        }
+    }
+  }
+}

@@ -40,15 +40,15 @@
         />
       </div>
     </header>
-    <input
-      class="header__input"
-      type="text"
-      value = 'developer'
-      name="header__input"
-      placeholder="Search for any word"
-      spellcheck
-      required
-    />
+    <div class="input-wrapper">
+      <input
+        class="header__input"
+        type="text"
+        name="header__input"
+        placeholder="Search for any word"
+        required
+      />
+    </div>
     <section class="dictionary">
       <div class="dictionary__head">
         <div class="dictionary__word-wrapper">
@@ -61,57 +61,75 @@
           alt="play button"
         />
       </div>
-      <div class="noun">
-        <div class="dictionary__first-partOfSpeech-element">
-          <p class="dictionary__first-partOfSpeech">noun</p>
-          <div class="dictionary__line"></div>
-        </div>
-        <p class="dictionary__meaning">Meaning</p>
-        <div class="dictionary__wrapper">
-          <ul class="dictionary__list-noun">
+      <div class="dictionary__parentElement">
+        <audio
+          style="display: none"
+          class="audio"
+          src="https://www.myinstants.com/media/sounds/no-god-please-no-noooooooooo.mp3"
+          preload="none"
+        ></audio>
+        <div class="title-wrapper">
+          <div class="dictionary__partOfSpeech-element">
+            <div class="dictionary__partOfSpeech">noun</div>
+            <div class="dictionary__line"></div>
+          </div>
+          <div class="dictionary__meaning">Meaning</div>
+          <ul class="dictionary__list">
+            <li class="dictionary__definition">
+              A person or entity engaged in the creation or improvement of
+              certain classes of products.
+              <p class="dictionary__example"></p>
+            </li>
+            <li class="dictionary__definition">
+              A real estate developer; a person or company who prepares a parcel
+              of land for sale, or creates structures on that land.
+              <p class="dictionary__example"></p>
+            </li>
+            <li class="dictionary__definition">
+              A film developer; a person who uses chemicals to create
+              photographs from photograph negatives.
+              <p class="dictionary__example"></p>
+            </li>
+            <li class="dictionary__definition">
+              A liquid used in the chemical processing of traditional photos.
+              <p class="dictionary__example"></p>
+            </li>
+            <li class="dictionary__definition">
+              (dyeing) A reagent used to produce an ingrain color by its action
+              upon some substance on the fiber.
+              <p class="dictionary__example"></p>
+            </li>
+            <li class="dictionary__definition">
+              A software developer; a person or company who creates or modifies
+              computer software.
+              <p class="dictionary__example"></p>
+            </li>
+            <p class="dictionary__synonyms-antonyms-title">Synonyms</p>
+            <p class="dictionary__synonyms-antonyms">
+              designer, programmer, software engineer
+            </p>
+            <p class="dictionary__synonyms-antonyms-title"></p>
+            <p class="dictionary__synonyms-antonyms"></p>
           </ul>
         </div>
-        <div class="dictionary__synonyms noun-synonyms">
-        </div>
-      </div>
-      <div class="verb">
-        <div class="dictionary__second-partOfSpeech-element">
-          <p class="dictionary__second-partOfSpeech">verb</p>
-          <div class="dictionary__line"></div>
-        </div>
-        <p class="dictionary__meaning">Meaning</p>
-        <div class="dictionary__wrapper">
-          <ul class="dictionary__list-verb"></ul>
-        </div>
-        <div class="dictionary__synonyms verb-synonyms"></div>
-        <p class="dictionary__example">
-          "Keyboarding is the part of this job I hate the most."
-        </p>
-      </div>
-      <div class="adjective">
-        <div class="dictionary__third-partOfSpeech-element">
-          <p class="dictionary__third-partOfSpeech">adjective</p>
-          <div class="dictionary__line"></div>
-        </div>
-        <p class="dictionary__meaning">Meaning</p>
-        <div class="dictionary__wrapper">
-          <ul class="dictionary__list-adjective"></ul>
-        </div>
-        <div class="dictionary__synonyms adjective-synonyms"></div>
-        <p class="dictionary__example">
-          "Keyboarding is the part of this job I hate the most."
-        </p>
       </div>
       <div class="dictionary__line"></div>
-      <p class="dictionary__source">Source</p>
-      <div class="dictionary__link-wrapper">
-        <a class="dictionary__link" href="
-        https://en.wiktionary.org/wiki/developer">
-          https://en.wiktionary.org/wiki/developer</a>
-        <img
-          src="/starter-code/assets/images/icon-new-window.svg"
-          alt="new window"
-        />
+      <div class="source-wrapper">
+        <p class="dictionary__source">Source</p>
+        <div class="dictionary__link-wrapper">
+          <a
+            class="dictionary__link"
+            href="
+        https://en.wiktionary.org/wiki/developer"
+          >
+            https://en.wiktionary.org/wiki/developer</a
+          >
+          <img
+            class="dictionary__source-img"
+            src="/starter-code/assets/images/icon-new-window.svg"
+            alt="new window"
+          />
+        </div>
       </div>
     </section>
   </body>

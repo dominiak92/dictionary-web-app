@@ -79,11 +79,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 32px;
+  @include lg {
+    margin-bottom: 40px;
+  }
 }
 
-@mixin elementOdSpeech {
+@mixin elementOfSpeech {
   font-weight: 700;
   font-size: 18px;
   font-style: italic;
   margin-right: 25px;
+  display: flex;
+  @include lg {
+    font-size: 24px;
+  }
 }

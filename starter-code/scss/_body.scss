@@ -3,7 +3,6 @@ body {
   flex-direction: column;
   font-family: $font2;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
   width: 375px; 
   background-color: $white;
@@ -12,4 +11,15 @@ body {
   padding: 24px;
   box-sizing: border-box;
   margin: 0 auto;
+@include lg {
+  box-sizing: content-box;
+  width: 689px;
 }
+@include xl {
+  width: 737px;
+}
+}
+@include font1;
+@include font2;
+@include font3;
+@include dark;

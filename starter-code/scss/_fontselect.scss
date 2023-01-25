@@ -1,0 +1,13 @@
+@mixin font1 {
+body.font1 {
+    font-family: $font1;
+}}
+@mixin font2 {
+body.font2 {
+font-family: $font2;
+}}
+
+@mixin font3 {
+body.font3 {
+font-family: $font3;
+}}

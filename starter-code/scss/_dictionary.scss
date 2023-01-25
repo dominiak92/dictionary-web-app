@@ -2,10 +2,21 @@
   &__head {
     display: flex;
     width: 327px;
-    height: 69px;
+    // height: 69px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 28px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    @include lg {
+        width: 689px;
+        margin-top: 41px;
+        margin-bottom: 39px;
+    }
+    @include xl {
+        width: 737px;
+        margin-top: 45px;
+        margin-bottom: 40px;
+    }
   }
   &__word-wrapper {
     display: flex;
@@ -19,38 +30,63 @@
     font-size: 32px;
     font-weight: 700;
     margin: 0;
+    @include lg {
+        font-size: 64px;
+    }
   }
   &__phonetics {
     margin: 0;
     margin-top: 7px;
     color: $purple;
+    @include lg {
+        font-size: 24px;
+    }
   }
   &__play {
     width: 48px;
     height: 48px;
-    cursor: pointer;
+    filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+    cursor: initial;
+    @include lg{
+        width: 75px;
+        height: 75px;
+    }
   }
-  &__first-partOfSpeech-element {
-    @include partOfSpeech
+  &__partOfSpeech-element {
+    @include partOfSpeech;
   }
-  &__first-partOfSpeech {
-    @include elementOdSpeech
+  &__partOfSpeech {
+    @include elementOfSpeech;
   }
   &__line {
     height: 1px;
     width: 100%;
     background-color: $lightergray;
   }
+  &__parentElement {
+    width: 100%;
+    height: auto;
+  }
+
   &__meaning {
     color: $lightgray;
     font-size: 16px;
-    margin-top: 10px;
+    margin-bottom: 17px;
+    @include lg {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
   }
-  &__list-noun {
+  &__list {
     list-style: none;
   }
   &__definition {
     margin-bottom: 13px;
+    @include lg {
+        font-size: 18px;
+    }
     &::before {
       content: "\2022";
       color: $purple;
@@ -60,36 +96,21 @@
       margin-left: -40px;
     }
   }
-  &__synonyms {
-    display: flex;
-  }
-  &__synonym-name {
-    color: $lightgray;
+  &__synonyms-antonyms {
     font-size: 16px;
-    margin-right: 24px;
+      color: $purple;
+     font-weight: 700;
+     @include lg {
+        font-size: 20px;
+     }
   }
-  &__synonym {
-    font-size: 16px;
-    color: $purple;
-    font-weight: 700;
-  }
-  &__second-partOfSpeech-element {
-    @include partOfSpeech
-  }
-  &__second-partOfSpeech {
-    @include elementOdSpeech
-  }
-  &__third-partOfSpeech-element {
-    @include partOfSpeech
-  }
-  &__third-partOfSpeech {
-    @include elementOdSpeech
-  }
-  &__list-verb {
-    list-style: none;
-  }
-  &__list-adjective {
-    list-style: none;
+  &__synonyms-antonyms-title {
+        color: $lightgray;
+        font-size: 16px;
+        margin-top: 10px;
+        @include lg {
+            font-size: 20px;
+         }
   }
   &__example {
     font-size: 15px;
@@ -102,32 +123,49 @@
     color: $lightgray;
     text-decoration: underline;
     font-size: 14px;
-    margin-top: 24px;
+    margin-right: 10px;
+  }
+  &__source-img {
+    cursor: pointer;
   }
   &__link-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include lg {
+        justify-content: flex-start;
+    }
   }
   &__link {
     color: $black;
+    font-size: 14px;
+
   }
-  .verb {
-    display: none
+  &__error {
+    color: $orange;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 13px;
+    position: absolute;
   }
-  .adjective {
-    display: none
+  &__errorImg {
+    width: 300px;
+    height: 300px;
+    @include lg {
+        width: 500px;
+    height: 500px;
+        transform: translateX(-90px)
+    }
   }
-  .noun {
-    display: none
+  &__img-wrapper {
+    height: 300px;
+    @include lg{
+        height: 500px;
+    }
   }
-  .adjective-synonyms {
-    display: none;
-  }
-  .verb-synonyms {
-    display: none;
-  }
-  .noun-synonyms {
-    display: none;
+  .source-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
   }
 }
