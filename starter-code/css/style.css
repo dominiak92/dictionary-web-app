@@ -48,6 +48,9 @@ body.dark .header__fonts {
   background-color: #050505;
   color: #FFFFFF;
 }
+body.dark .header__search {
+  background-color: #1F1F1F;
+}
 body.dark .header__moon {
   filter: invert(40%) sepia(96%) saturate(4816%) hue-rotate(260deg) brightness(99%) contrast(87%);
 }
@@ -169,20 +172,37 @@ body.dark .dictionary__link {
   height: 20px;
   margin-left: 12px;
 }
+.header__search {
+  height: 48px;
+  width: 60px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: none;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/icon-search.svg);
+  background-color: #F4F4F4;
+  background-position: calc(100% - 16px);
+  margin-top: 24px;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .header__search {
+    height: 64px;
+    background-position: calc(100% - 24px);
+  }
+}
 
 input {
-  width: 327px;
+  width: 267px;
   height: 48px;
   box-sizing: border-box;
-  border-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
   border: none;
   padding: 16px;
   margin-top: 24px;
   background-color: #F4F4F4;
-  background-image: url(../assets/images/icon-search.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 16px);
-  background-size: 15px;
   font-size: 16px;
   font-weight: 700;
   color: #2D2D2D;
@@ -199,11 +219,18 @@ input {
 }
 @media (min-width: 1200px) {
   input {
-    width: 736px;
+    width: 676px;
   }
 }
 input:focus {
   outline: none;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .dictionary__head {
@@ -360,6 +387,11 @@ input:focus {
   padding-left: 35px;
   margin-bottom: 32px;
 }
+@media (min-width: 992px) {
+  .dictionary__example {
+    font-size: 18px;
+  }
+}
 .dictionary__source {
   color: #757575;
   text-decoration: underline;
@@ -389,6 +421,13 @@ input:focus {
   margin-left: 10px;
   font-size: 13px;
   position: absolute;
+  top: 72px;
+  left: 0px;
+}
+@media (min-width: 992px) {
+  .dictionary__error {
+    top: 92px;
+  }
 }
 .dictionary__errorImg {
   width: 300px;
@@ -413,4 +452,5 @@ input:focus {
   display: flex;
   align-items: center;
   margin-top: 21px;
+  transition: 0.3s linear;
 }/*# sourceMappingURL=style.css.map */

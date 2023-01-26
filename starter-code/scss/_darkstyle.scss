@@ -8,6 +8,9 @@
         background-color: $black;
         color: $white;
       }
+      &__search{
+        background-color: $darkgray;
+      }
       &__moon {
         filter: invert(40%) sepia(96%) saturate(4816%) hue-rotate(260deg)
           brightness(99%) contrast(87%);

@@ -13,6 +13,7 @@ const toggleBtn = document.querySelector('#switch');
 const inputWrapper = document.querySelector('.input-wrapper')
 const header = document.querySelector('.dictionary__head')
 const logo = document.querySelector('.header__logo')
+const searchBtn = document.querySelector('.header__search')
 
 //function for fonts changing
 fontSelect.addEventListener('change', function() {
@@ -58,7 +59,8 @@ const reloadOnLogo = () => {
 logo.addEventListener('click', reloadOnLogo)
 const catchWord = (e) => {
     e.preventDefault();
-    if (e.keyCode === 13) {
+    //if enter or search button is pressed
+    if (e.keyCode === 13 || e.button === 0) {
     const resetParent = () => {
      while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -66,9 +68,9 @@ const catchWord = (e) => {
         }
     const inputValue = input.value
     if (!inputValue){
-    return
+return
     } else {
-        resetParent(); clearInput()
+        resetParent(); clearInput();
             }
         axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`)
   .then(response => {
@@ -89,9 +91,9 @@ const catchWord = (e) => {
         sourceTitle.style.display = "block"
         sourceImg.style.display = "block"
     }
-    // making url
+    // making url, if sourceurl has more than one value, put to innerText just one value.
     source.innerText = sourceUrls
-    source.setAttribute('href', sourceUrls);
+    sourceUrls.length > 1 ? (source.innerText = sourceUrls[1], source.setAttribute('href', sourceUrls[1])) : (source.innerText = sourceUrls, source.setAttribute('href', sourceUrls))
 
     // if phonetics is undefined return nothing
     dictionaryPhonetics.innerText = phonetic
@@ -197,6 +199,8 @@ const catchWord = (e) => {
     synonymAntonymMaker('antonyms', 'Antonyms')
     }); 
 playButton.addEventListener('click', playAudio)
+
+
   })
 
   //getting error
@@ -227,4 +231,5 @@ playButton.addEventListener('click', playAudio)
 
 }
 input.addEventListener('keyup', e => catchWord(e))
+searchBtn.addEventListener('mouseup', e => catchWord(e))
 
