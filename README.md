@@ -1,4 +1,4 @@
-# Dictionary web app solution 
+# Dictionary web app
 
 ## Table of contents
 
