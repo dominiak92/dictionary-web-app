@@ -1,6 +1,4 @@
-# Frontend Mentor - Dictionary web app solution
-
-This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# Dictionary web app solution 
 
 ## Table of contents
 
@@ -38,4 +36,4 @@ I need to improve the functioning of the audio because not every object has its 
 
 ## Author
 
-- Frontend Mentor - [@sebix0nus](https://www.frontendmentor.io/profile/sebix0nus)
+- [Sebastian Dominiak](https://www.sebastiandominiak.pl)
